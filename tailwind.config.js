@@ -12,7 +12,11 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors: {
+        'keyboard': "#dce1ed",
+        "keyboard-text": "#5a6376"
+      }
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
