@@ -20,15 +20,17 @@ export default function HandleGame() {
     const dispatch = useDispatch();
 
     function handleModal() {
-      window.message_modal.showModal()
+      const modal: any = document.getElementById("message_modal")
+      modal?.showModal()
       setTimeout(() => {
-        window.message_modal.close()
+        modal.close()
         dispatch(setCanEnter())
       }, 1500)
     }
 
     function handleGameOverModal() {
-        window.gameover_modal.showModal()
+       const modal: any = document.getElementById("gameover_modal");
+       modal.showModal()
     }
 
     async function handleKeyPress(event: KeyboardEvent) {

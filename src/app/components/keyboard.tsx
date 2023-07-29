@@ -21,13 +21,14 @@ const Keyboard = () => {
     const secondLine = 'asdfghjkl';
     const thirdLine = ["delete", "z", "x", "c", "v", "b", "n", "m", "Enter"];
 
-  function handleModal() {
-    window.message_modal.showModal()
-    setTimeout(() => {
-      window.message_modal.close()
-      dispatch(setCanEnter())
-    }, 1500)
-  }
+    function handleModal() {
+      const modal: any = document.getElementById("message_modal")
+      modal?.showModal()
+      setTimeout(() => {
+        modal.close()
+        dispatch(setCanEnter())
+      }, 1500)
+    }
 
   async function handleKeyPress(letter: string) {
       if (letter == "delete" && currentX > 0 && !gameover && currentY < 6) {
